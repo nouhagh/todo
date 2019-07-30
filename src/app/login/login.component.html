@@ -1,7 +1,17 @@
-<div>
-user name : <input type="text" name="username"  [(ngModel)]="username"/>
-password : <input type="password" name="password" [(ngModel)]="password"/>
-<button (click)="handleLogin()"> login</button>
+<H1>Login!</H1>
 
-<label *ngIf="errorLogin"> {{errorMessage}}</label>
+<div class="container">
+  <div class="alert alert-warning" *ngIf='errorLogin'>{{errorMessage}}</div>
+
+  <div>
+    User Name : <input type="text" name="username" [(ngModel)]="username">
+    Password  : <input type="password" name="password" [(ngModel)]="password">
+
+    <!-- User Name : {{username}} -->
+
+    <!-- <button (click)=handleLogin() class="btn btn-success">Login</button> -->
+    <!-- <button (click)=handleBasicAuthLogin() class="btn btn-success">Login</button> -->
+    <button (click)=handleLogin() class="btn btn-success">Login</button>
+
+  </div>
 </div>

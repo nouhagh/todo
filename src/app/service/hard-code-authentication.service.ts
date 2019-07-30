@@ -13,4 +13,13 @@ export class HardCodeAuthenticationService {
     }
     return false;
   }
+  isUserLoggedIn() {
+    const user = sessionStorage.getItem('authenticaterUser');
+    return !(user === null);
+  }
+
+  logout() {
+    sessionStorage.removeItem('authenticaterUser');
+  }
+
 }
